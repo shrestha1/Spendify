@@ -319,6 +319,25 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary:hover { background: #333; }
 
+.btn-how-it-works {
+    display: inline-block;
+    background: transparent;
+    color: var(--ink-muted);
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-how-it-works:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+}
+
 .btn-ghost {
     display: inline-block;
     background: transparent;
@@ -547,6 +566,84 @@ a { color: inherit; text-decoration: none; }
 .footer-copy {
     font-size: 0.8rem;
     color: var(--ink-faint);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.footer-link {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--paper);
+}
+
+/* ------------------------------------------------------------------ */
+/* Video Modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--accent-2);
+}
+
+.modal-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: #000;
+}
+
+.modal-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* ------------------------------------------------------------------ */
